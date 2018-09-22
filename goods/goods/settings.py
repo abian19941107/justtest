@@ -54,7 +54,8 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'goods.middlewares.GoodsDownloaderMiddleware': 543,
-  'goods.middlewares.UserAgentMiddleware': 1,
+  'goods.middlewares.UserAgentMiddleware': 2,
+  'goods.middlewares.SeleniumMiddleware': 4,
   'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware':None,
 }
 # Enable or disable extensions

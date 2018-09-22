@@ -131,6 +131,9 @@ class UserAgentMiddleware(object):
             request.headers.setdefault(b'User-Agent', usa_agent)
 
 class SeleniumMiddleware(object):
+    '''
+    无界面selenium
+    '''
     def __init__(self,timeout = 10,load_image = False):
         self.logger = getLogger(__name__)
         self.timeout = timeout
