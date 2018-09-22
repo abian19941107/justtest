@@ -91,3 +91,4 @@ AUTOTHROTTLE_START_DELAY = 2
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 USER_AGENT_TYPE = 'random'
+SELENIUM_TIMEOUT = 10

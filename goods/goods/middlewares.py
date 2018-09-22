@@ -4,9 +4,19 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+from logging import getLogger
+
+import time
+from selenium.webdriver import Chrome
+
 from fake_useragent import UserAgent
 from scrapy import signals
-
+from scrapy.http import HtmlResponse
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 class GoodsSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -54,7 +64,6 @@ class GoodsSpiderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
-
 
 class GoodsDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -113,11 +122,66 @@ class UserAgentMiddleware(object):
 
     @classmethod
     def from_crawler(cls, crawler):
-        o = cls(crawler.settings['USER_AGENT_TYPE'])
+        o = cls(crawler.settings.get('USER_AGENT_TYPE'))
         return o
 
     def process_request(self, request, spider):
         if self.ua_type:
             usa_agent = getattr(self.user_agent,self.ua_type,'scrapy')
             request.headers.setdefault(b'User-Agent', usa_agent)
-            print(usa_agent)
+
+class SeleniumMiddleware(object):
+    def __init__(self,timeout = 10,load_image = False):
+        self.logger = getLogger(__name__)
+        self.timeout = timeout
+        self.option = Options()
+        # 无界面运行
+        self.option.add_argument('--headless')
+        self.option.add_argument('--disable-gpu')
+        # 不加载图片
+        self.load_image = load_image
+        if self.load_image:
+            self.option.add_experimental_option('prefs',{"profile.managed_default_content_settings.images":2})
+        self.driver=Chrome(
+            executable_path='D:\selenium_webdriver\chromedriver.exe',
+            chrome_options=self.option
+        )
+        self.driver.set_page_load_timeout(self.timeout)
+        self.wait = WebDriverWait(self.driver,25)
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            crawler.settings.get('SELENIUM_TIMEOUT'),
+            crawler.settings.get('LOAD_IMAGE'),
+                   )
+
+    def process_request(self, request, spider):
+        '''
+        使用chrome 抓取渲染页面
+        :param request: scrapy Request请求对象
+        :param spider: Spider对象
+        :return: 返回 HtmlResponse对象
+        '''
+        # 判断是否需要使用selenium
+        if not request.meta.get('useSelenium',False):
+            return None
+        try:
+            self.driver.get(request.url)
+            # 是否使用搜索框
+            if request.meta.get('selection',False):
+                selection = self.wait.until(
+                   expected_conditions.presence_of_element_located((By.XPATH,'//input[@id="q"]'))
+                )
+                selection.clear()
+                selection.send_keys(request.meta.get('selection'))
+                selection.send_keys(Keys.ENTER)
+            # 等待页面加载完成
+            self.wait.until(
+                expected_conditions.presence_of_all_elements_located(
+                    (By.XPATH, '//div[@id="mainsrp-pager"]|//div[@id="mainsrp-itemlist"]'))
+            )
+            response = HtmlResponse(url=request.url,request=request,status=200,encoding='utf-8',body=self.driver.page_source)
+        except:
+            response = HtmlResponse(url=request.url,request=request,status=500)
+        return response

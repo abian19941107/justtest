@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00e6bdeb-fe5e-4984-b054-02c092092f9d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/justtest.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/goods/run.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goods/goods/middlewares.py" afterPath="$PROJECT_DIR$/goods/goods/middlewares.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goods/goods/settings.py" afterPath="$PROJECT_DIR$/goods/goods/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/goods/goods/spiders/taobao.py" afterPath="$PROJECT_DIR$/goods/goods/spiders/taobao.py" />
     </list>
     <ignored path="justtest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,6 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/justtest$test.coverage" NAME="test Coverage Results" MODIFIED="1537600373011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/goods" />
     <SUITE FILE_PATH="coverage/justtest$run.coverage" NAME="run Coverage Results" MODIFIED="1537599619148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/goods" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -37,18 +32,43 @@
       <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goods/goods/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="138">
+              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods/run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/goods/goods/middlewares.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="140" column="44" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
+              <folding>
+                <element signature="e#168#197#0" expanded="true" />
+                <element signature="e#654#2316#0" expanded="false" />
+                <element signature="e#2363#4006#0" expanded="false" />
+                <element signature="e#4047#4542#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goods/goods/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-618">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state relative-caret-position="190">
+              <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -71,6 +91,7 @@
       <list>
         <option value="$PROJECT_DIR$/goods/goods/spiders/taobao.py" />
         <option value="$PROJECT_DIR$/goods/run.py" />
+        <option value="$PROJECT_DIR$/goods/test.py" />
         <option value="$PROJECT_DIR$/goods/goods/settings.py" />
         <option value="$PROJECT_DIR$/goods/goods/middlewares.py" />
       </list>
@@ -83,10 +104,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="402" />
-    <option name="y" value="20" />
+    <option name="x" value="-230" />
+    <option name="y" value="144" />
     <option name="width" value="1378" />
-    <option name="height" value="579" />
+    <option name="height" value="575" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -159,28 +180,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="justtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="justtest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="goods" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="goods" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spiders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -191,7 +190,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Envs/scrapy_venv/Scripts/python.exe" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python.test">
     <configuration default="false" name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -206,6 +205,24 @@
       <module name="justtest" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/goods/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/goods" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="justtest" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/goods/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -412,12 +429,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.run" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.run" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run" />
       </list>
     </recent_temporary>
   </component>
@@ -435,18 +454,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="402" y="20" width="1378" height="579" extended-state="0" />
+    <frame x="-230" y="144" width="1378" height="575" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20182094" sideWeight="0.48821548" order="-1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09711684" sideWeight="0.48821548" order="-1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280543" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12669684" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2511381" sideWeight="0.5117845" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54260087" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28923768" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66816145" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -464,22 +483,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/goods/goods/middlewares.py</url>
-          <line>121</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/goods/goods/middlewares.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/goods/goods/middlewares.py</url>
-          <line>122</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
@@ -535,30 +538,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goods/goods/spiders/taobao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods/goods/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
-          <folding>
-            <element signature="e#168#204#0" expanded="true" />
-            <element signature="e#1985#3628#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,19 +554,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/goods/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="73" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/goods/goods/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="138">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goods/goods/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-618">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        <state relative-caret-position="190">
+          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Envs/scrapy_venv/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="181" column="38" selection-start-line="181" selection-start-column="23" selection-end-line="181" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods/goods/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="140" column="44" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
+          <folding>
+            <element signature="e#168#197#0" expanded="true" />
+            <element signature="e#654#2316#0" expanded="false" />
+            <element signature="e#2363#4006#0" expanded="false" />
+            <element signature="e#4047#4542#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
