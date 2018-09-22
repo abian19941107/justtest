@@ -4,7 +4,7 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
+from fake_useragent import UserAgent
 from scrapy import signals
 
 
@@ -101,3 +101,23 @@ class GoodsDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+class UserAgentMiddleware(object):
+    '''
+    设置user_agent
+    支持在在settings中设置随机ua的类型
+    '''
+    def __init__(self, ua_type):
+        self.user_agent = UserAgent()
+        self.ua_type = ua_type
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        o = cls(crawler.settings['USER_AGENT_TYPE'])
+        return o
+
+    def process_request(self, request, spider):
+        if self.ua_type:
+            usa_agent = getattr(self.user_agent,self.ua_type,'scrapy')
+            request.headers.setdefault(b'User-Agent', usa_agent)
+            print(usa_agent)
